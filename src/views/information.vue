@@ -117,7 +117,7 @@ export default {
   },
   methods: {
     submitPeminjaman() {
-      fetch("http://localhost/buku/peminjamanbuku.php", {
+      fetch("https://mhdrmaulana.my.id/buku/peminjamanbuku.php", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -135,7 +135,7 @@ export default {
         });
     },
     submitPengembalian() {
-      fetch("http://localhost/buku/pengembalianbuku.php", {
+      fetch("https://mhdrmaulana.my.id/buku/pengembalianbuku.php", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -155,7 +155,7 @@ export default {
     fetchPeminjamanDipinjam() {
       // Panggil API backend PHP untuk mendapatkan data peminjaman dengan status DIPINJAM
       axios
-        .get("http://localhost/buku/listdipinjam.php")
+        .get("https://mhdrmaulana.my.id/buku/listdipinjam.php")
         .then((response) => {
           this.peminjamanDipinjam = response.data;
         })
@@ -166,7 +166,7 @@ export default {
     fetchPeminjamanDikembalikan() {
       // Panggil API backend PHP untuk mendapatkan data peminjaman dengan status DIKEMBALIKAN
       axios
-        .get("http://localhost/buku/listdikembalikan.php")
+        .get("https://mhdrmaulana.my.id/buku/listdikembalikan.php")
         .then((response) => {
           this.peminjamanDikembalikan = response.data;
         })

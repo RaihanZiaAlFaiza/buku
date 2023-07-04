@@ -38,7 +38,7 @@ export default {
   methods: {
     fetchCategories() {
       axios
-        .get("http://localhost/buku/selectkategory.php")
+        .get("https://mhdrmaulana.my.id/buku/selectkategory.php")
         .then((response) => {
           this.categories = response.data;
         })
@@ -49,7 +49,7 @@ export default {
     deleteCategory(kode) {
       if (confirm("Are you sure you want to delete this category?")) {
         axios
-          .delete(`http://localhost/buku/deletekategory.php${kode}`)
+          .delete(`https://mhdrmaulana.my.id/buku/deletekategory.php${kode}`)
           .then(() => {
             alert("Category deleted successfully");
             this.fetchCategories();

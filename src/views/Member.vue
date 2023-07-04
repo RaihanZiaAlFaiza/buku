@@ -102,7 +102,7 @@ export default {
     search() {
       const number = this.searchNumber;
       axios
-        .get(`http://localhost/buku/selectnoanggota.php${number}`)
+        .get(`https://mhdrmaulana.my.id/buku/selectnoanggota.php${number}`)
         .then((response) => {
           this.searchedMember = response.data;
         })
@@ -114,7 +114,7 @@ export default {
     // Ambil seluruh anggota dari backend API
     getAnggotaList() {
       axios
-        .get("http://localhost/buku/selectanggota.php")
+        .get("https://mhdrmaulana.my.id/buku/selectanggota.php")
         .then((response) => {
           this.anggotaList = response.data;
         })
@@ -138,7 +138,7 @@ export default {
     submitForm() {
       if (this.mode === "tambah") {
         axios
-          .post("http://localhost/buku/insertanggota.php", this.anggota)
+          .post("https://mhdrmaulana.my.id/buku/insertanggota.php", this.anggota)
           .then((response) => {
             console.log(response.data);
             // Reset form dan ambil seluruh anggota setelah sukses menambahkan anggota
@@ -150,7 +150,7 @@ export default {
           });
       } else {
         axios
-          .put("http://localhost/buku/updateanggota.php" + this.anggota.nomor, this.anggota)
+          .put("https://mhdrmaulana.my.id/buku/updateanggota.php" + this.anggota.nomor, this.anggota)
           .then((response) => {
             console.log(response.data);
             // Reset form dan ambil seluruh anggota setelah sukses mengedit anggota
@@ -165,7 +165,7 @@ export default {
     // Menghapus anggota berdasarkan nomor
     hapusAnggota(nomor) {
       axios
-        .delete("http://localhost/buku/deleteanggota.php" + nomor)
+        .delete("https://mhdrmaulana.my.id/buku/deleteanggota.php" + nomor)
         .then((response) => {
           console.log(response.data);
           // Ambil seluruh anggota setelah sukses menghapus anggota

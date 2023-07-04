@@ -46,7 +46,7 @@ export default {
   methods: {
     fetchBooks() {
       axios
-        .get("http://localhost/buku/selectbuku.php")
+        .get("https://mhdrmaulana.my.id/buku/selectbuku.php")
         .then((response) => {
           this.books = response.data;
         })
@@ -57,7 +57,7 @@ export default {
     deleteBook(kode) {
       if (confirm("Are you sure you want to delete this book?")) {
         axios
-          .delete(`http://localhost/buku/deletebuku.php${kode}`)
+          .delete(`https://mhdrmaulana.my.id/buku/deletebuku.php${kode}`)
           // eslint-disable-next-line no-unused-vars
           .then((response) => {
             this.fetchBooks();
