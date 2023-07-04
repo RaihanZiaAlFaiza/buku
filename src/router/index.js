@@ -3,7 +3,7 @@ import HomeView from "../views/HomeView.vue";
 import Books from "../views/Books.vue";
 import Categories from "../views/Categories.vue";
 import Member from "@/views/Member.vue";
-import Desc from "@/views/Information.vue";
+import Information from "@/views/information.vue";
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -28,9 +28,9 @@ const router = createRouter({
       component: Member,
     },
     {
-      path: "/desc",
-      name: "Desc",
-      component: Desc,
+      path: "/information",
+      name: "information",
+      component: Information,
     },
     {
       path: "/about",
