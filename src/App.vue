@@ -11,10 +11,13 @@
             <router-link to="/books" class="nav-link">Book Store</router-link>
           </li>
           <li class="nav-item">
-            <router-link to="/categories" class="nav-link">Categories</router-link>
+            <router-link to="/categories" class="nav-link">kategori</router-link>
           </li>
           <li class="nav-item">
             <router-link to="/Member" class="nav-link">Member</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link to="/Desc" class="nav-link">informasi</router-link>
           </li>
         </ul>
       </div>
